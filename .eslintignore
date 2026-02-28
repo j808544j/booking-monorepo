@@ -1,0 +1,7 @@
+dist
+node_modules
+coverage
+apps/**/dist
+apps/**/node_modules
+packages/**/dist
+
