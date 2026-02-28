@@ -10,6 +10,22 @@ Minimal appointment booking system, built as a TypeScript monorepo with a React 
 - **Database**: PostgreSQL 17
 - **Containerisation**: Docker + `docker-compose`
 
+### Running with Docker(Recommended)
+
+- **1. Build and start all services(Make sure docker desktop is running before this command is run)**
+
+```bash
+docker compose up --build
+```
+
+Services:
+
+- `db`: PostgreSQL on `localhost:5432`
+- `backend`: API on `http://localhost:4000`
+- `frontend`: SPA on `http://localhost:3000`
+
+The backend container runs migrations automatically on startup before serving traffic.
+
 ### Setup (local without Docker)
 
 - **1. Prerequisites**
@@ -47,22 +63,6 @@ This starts:
 - Frontend on `http://localhost:5173`
 
 Make sure `VITE_API_BASE` (in `.env`) points to `http://localhost:4000/api`.
-
-### Running with Docker
-
-- **1. Build and start all services**
-
-```bash
-docker compose up --build
-```
-
-Services:
-
-- `db`: PostgreSQL on `localhost:5432`
-- `backend`: API on `http://localhost:4000`
-- `frontend`: SPA on `http://localhost:3000`
-
-The backend container runs migrations automatically on startup before serving traffic.
 
 ### API Overview
 
